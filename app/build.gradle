@@ -4,6 +4,15 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        debug {
+            storeFile rootProject.file('debug.keystore')
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+
     namespace 'demos.android.list.view.demo'
     compileSdk 34
     defaultConfig {
